@@ -93,10 +93,11 @@ function App() {
   }
 
   useEffect(() => {
-    if (isSending == true) {
+    if (isSending === true) {
       scrollToBottom();
       sendRequest(lastString);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isSending])
 
   const handleChangeMessage = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -107,7 +108,7 @@ function App() {
     <div className='flex flex-col md:flex-row items-start justify-center max-w-full box-border h-screen md:h-auto'>
       <aside className='bg-obscure-500 w-full md:w-1/4 md:h-screen text-white p-5'>
         <div className='mb-5'>Hi, my name is Luis and I am a Software Engineer. I created this version of ChatGPT using the OpenAI API via NodeJS and React. Ask whatever you want! If you want to support my work you can donate here:</div>
-        <a className='w-full border-white border-2 border-solid rounded p-2 flex items-center justify-start hover:bg-obscure-100'><FontAwesomeIcon icon={faHandHoldingDollar} className='pr-4' href="https://buy.stripe.com/fZe15j3xDbbhexG5kl" /> Donate</a>
+        <a className='w-full border-white border-2 border-solid rounded p-2 flex items-center justify-start hover:bg-obscure-100' href="https://buy.stripe.com/fZe15j3xDbbhexG5kl"><FontAwesomeIcon icon={faHandHoldingDollar} className='pr-4' /> Donate</a>
       </aside>
       <section className='bg-obscure-100 w-full h-full  md:w-3/4 md:h-screen p-5 text-white relative	flex justify-start	items-between flex-col'>
         <div className='flex flex-col overflow-y-scroll'>
