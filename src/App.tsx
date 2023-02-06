@@ -123,7 +123,7 @@ function App() {
           <div ref={messagesEndRef} />
         </div>
         <div className='mt-auto w-full flex'>
-          <textarea className='rounded w-full text-white px-3 pt-3 focus:outline-none bg-obscure-100 shadow-lg shadow-obscure-500/50' onChange={handleChangeMessage} />
+          <textarea className='rounded w-full border-white border-2 border-solid  text-white px-3 pt-3 focus:outline-none bg-obscure-100 shadow-lg shadow-obscure-500/50' onChange={handleChangeMessage} placeholder={"Write here..."} value={newMessage}/>
           <button disabled={isSending} className='w-14 ml-2 border-white border-2 border-solid flex items-center justify-center rounded' onClick={handleSendMessage}><FontAwesomeIcon icon={faPaperPlane} /></button>
         </div>
       </section>
